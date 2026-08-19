@@ -20,6 +20,7 @@ public class WaterReading {
     @Enumerated(EnumType.STRING)
     private WaterStatus status;
 
+    @Column(length = 1000)
     private String recommendation;
 
     private LocalDateTime timestamp = LocalDateTime.now();

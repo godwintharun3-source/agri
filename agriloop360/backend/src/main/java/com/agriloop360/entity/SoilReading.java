@@ -22,6 +22,8 @@ public class SoilReading {
     private Double potassium;
 
     private String status;
+
+    @Column(length = 1000)
     private String recommendation;
 
     private LocalDateTime timestamp = LocalDateTime.now();

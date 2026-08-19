@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd agriloop360/frontend && npm install && npm run build",
+  "outputDirectory": "agriloop360/frontend/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

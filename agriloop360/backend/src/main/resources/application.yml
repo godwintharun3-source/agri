@@ -7,18 +7,17 @@ spring:
   application:
     name: agriloop360-backend
   datasource:
-    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/agriloop360?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
-    username: ${MYSQL_USER:root}
-    password: ${MYSQL_PASSWORD:root}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${MYSQL_URL:jdbc:h2:mem:agriloop360;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL}
+    username: ${MYSQL_USER:sa}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: ${MYSQL_DRIVER:org.h2.Driver}
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
 
 app:
   jwt:

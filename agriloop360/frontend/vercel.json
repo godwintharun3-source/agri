@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://your-backend-api.onrender.com/api/:path*"
+      "destination": "https://agri-nr1f.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",

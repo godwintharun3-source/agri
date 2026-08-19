@@ -7,11 +7,12 @@ spring:
   application:
     name: agriloop360-backend
   datasource:
-    url: ${MYSQL_URL:jdbc:h2:mem:agriloop360;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL}
-    username: ${MYSQL_USER:sa}
-    password: ${MYSQL_PASSWORD:}
-    driver-class-name: ${MYSQL_DRIVER:org.h2.Driver}
+    url: jdbc:h2:mem:agriloop360;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
     show-sql: false
@@ -24,4 +25,4 @@ app:
 logging:
   level:
     root: INFO
-    com.agriloop360: DEBUG
+    com.agriloop360: INFO
